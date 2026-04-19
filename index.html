@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.T.A.L.K.E.R. PDA Collector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pda-frame">
+        <header>
+            <div class="status-bar">PDA v2.0 // NETWORK: CLAN_NET // USER: STALKER</div>
+            <h1>КОЛЛЕКЦИЯ КАРТОЧЕК</h1>
+        </header>
+        
+        <div class="grid" id="cardGrid">
+            </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2><span class="scanline-text">ДАННЫЕ ОБЪЕКТА</span></h2>
+            <input type="text" id="cardName" placeholder="Название артефакта/мутанта">
+            <select id="cardRarity">
+                <option value="common">Обычная</option>
+                <option value="rare">Редкая</option>
+                <option value="epic">Эпическая</option>
+                <option value="legend">Легендарная</option>
+            </select>
+            <label class="file-label">
+                ВЫБРАТЬ ФОТО
+                <input type="file" id="cardImage" accept="image/*" hidden>
+            </label>
+            <div class="modal-buttons">
+                <button onclick="saveCard()" class="btn-save">ВНЕСТИ В БАЗУ</button>
+                <button onclick="closeModal()" class="btn-cancel">ОТМЕНА</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
